@@ -8,7 +8,16 @@
 
 #import "MKWebVC.h"
 
+
+#import <Masonry.h>
+
+#import <WebKit/WebKit.h>
+
+
 @interface MKWebVC ()
+
+
+@property (nonatomic, strong) WKWebView *mWebview;/**<  */
 
 @end
 
@@ -17,21 +26,47 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self initData];
+    [self initUI];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)initUI {
+    
+    [self.view addSubview:self.mWebview];
+    
+    [self makeConstraints];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)makeConstraints {
+    
+    [self.mWebview mas_makeConstraints:^(MASConstraintMaker *make){
+        make.left.top.right.bottom.mas_equalTo(0);
+    }];
+    
 }
-*/
+
+- (void)initData {
+    
+    self.title = @"WKWebview";
+    
+}
+
+
+#pragma mark - proprety
+
+
+- (WKWebView *)mWebview {
+    
+    if(!_mWebview){
+        _mWebview = [[WKWebView alloc]init];
+    }
+    return _mWebview;
+    
+}
+
 
 @end

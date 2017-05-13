@@ -8,7 +8,12 @@
 
 #import "UIWebVC.h"
 
+#import <Masonry.h>
+
+
 @interface UIWebVC ()
+
+@property (nonatomic, strong) UIWebView *mWebview;/**<  */
 
 @end
 
@@ -17,21 +22,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self initData];
+    [self initUI];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)initUI {
+    
+    [self.view addSubview:self.mWebview];
+    
+    [self makeConstraints];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)makeConstraints {
+    
+    [self.mWebview mas_makeConstraints:^(MASConstraintMaker *make){
+        make.left.top.right.bottom.mas_equalTo(0);
+    }];
+    
 }
-*/
+
+- (void)initData {
+    
+    
+    self.title = @"UIWebview";
+    
+}
+
+
+#pragma mark - proprety
+
+
+- (UIWebView *)mWebview {
+    
+    if(!_mWebview){
+        _mWebview = [[UIWebView alloc]init];
+    }
+    return _mWebview;
+    
+}
+
+
 
 @end
