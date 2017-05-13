@@ -1,0 +1,73 @@
+<!-- < !DOCTYPE html> -->
+    <!-- saved from url=(0044)file:///Users/LiuYongSheng/Desktop/test.html -->
+    <html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>APP web与JS交互测试</title>
+        <meta name="author" content="Yanyuetian">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, target-densitydpi=medium-dpi, user-scalable=no">
+        <meta property="og:site_name" content="APP web与JS交互测试">
+        <script src="file:///android_asset/zepto.js" type="text/javascript"></script>
+        <style>
+        .entry {
+            -webkit-padding-start: 30px;
+        }
+        
+        .entry li {
+            line-height: 29px;
+            margin-left: -10px;
+        }
+        
+        .entry li div {
+            margin-right: 10px;
+            padding-left: 8px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            background: #222222;
+            color: white;
+            word-break: break-all;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            line-height: 15px;
+            font-size: 10pt;
+        }
+        
+        .entry li button {
+            margin-top: 5px;
+            width: 60px;
+            height: 35px;
+            color: #111111;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="blog-header">
+            <h3>APP web与JS交互测试</h3>
+        </div>
+        <ul class="entry">
+            <li>
+                气泡提示
+                <br> 代码：
+                <br>
+                <div>
+                    native.toast('我是气泡');
+                </div>
+                <button onclick="native.toast(&#39;我是气泡&#39;);">测试</button>
+            </li>
+            <br>
+            <li>
+                测试传递当前时间
+                <br> 代码：
+                <br>
+                <div>
+                    native.testLossTime(new Date().getTime());
+                </div>
+                <button onclick="native.testLossTime(new Date().getTime());">测试</button>
+            </li>
+            <br>
+        </ul>
+    </body>
+
+    </html>
