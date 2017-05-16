@@ -53,6 +53,12 @@
     
     self.title = @"WKWebview";
     
+    
+    
+    NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://mrliuys.github.io/2017/05/13/APP-web-and-JS/js.html"]];
+    
+    [self.mWebview loadRequest:request];
+    
 }
 
 
