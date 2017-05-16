@@ -23,6 +23,11 @@
 
 @implementation MKWebVC
 
+
+- (void)dealloc {
+    NSLog(@"释放---MKWebVC");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -53,13 +58,15 @@
     
     self.title = @"WKWebview";
     
-    
-    
     NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://mrliuys.github.io/2017/05/13/APP-web-and-JS/js.html"]];
     
     [self.mWebview loadRequest:request];
     
 }
+
+
+
+
 
 
 #pragma mark - proprety

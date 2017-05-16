@@ -8,20 +8,45 @@
 
 #import <Foundation/Foundation.h>
 
+#import <UIKit/UIKit.h>
+
 #import <JavaScriptCore/JavaScriptCore.h>
 
 @protocol LYSJSExport <JSExport>
 
 JSExportAs
-(openView  /** handleOpenView 作为js方法的别名 */,
- - (void)handleOpenView:(NSString *)aType
+(toast  /** handleToast 作为js方法的别名 */,
+ - (void)handleToast:(NSString *)toast
  );
 
 @end
 
+@protocol LYSWebManagerDelegate <NSObject>
+
+@optional
+- (void)lys_Web_handleToast:(NSString *)toast;
 
 
-@interface LYSWebManager : NSObject
+@end
+
+@interface LYSWebManager : NSObject <LYSJSExport>
+
+
+@property (nonatomic, assign) id <LYSWebManagerDelegate> webDelegate;
+
+
+@property (strong, nonatomic) JSContext *context;
+
+
+/**
+ 协议的配置
+ */
++ (void)lys_Web_Delegate:(id)delegate;
+
+/**
+ 配置webview的数据
+ */
++ (void)lys_Web_Set:(UIWebView *)webView;
 
 
 
