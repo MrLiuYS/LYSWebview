@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D035A331EE64A3200099A00 /* LYSWKWebManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D035A321EE64A3200099A00 /* LYSWKWebManager.m */; };
 		0D2483B61EC9833B00BEA2EA /* LYSWebManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2483B51EC9833B00BEA2EA /* LYSWebManager.m */; };
 		0D8904341EC69EA600DDFC5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8904331EC69EA600DDFC5C /* main.m */; };
 		0D8904371EC69EA600DDFC5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8904361EC69EA600DDFC5C /* AppDelegate.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D035A311EE64A3200099A00 /* LYSWKWebManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSWKWebManager.h; sourceTree = "<group>"; };
+		0D035A321EE64A3200099A00 /* LYSWKWebManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSWKWebManager.m; sourceTree = "<group>"; };
 		0D15A71A1ECAE2FB00718942 /* LYSWebManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSWebManagerDelegate.h; sourceTree = "<group>"; };
 		0D2483B41EC9833B00BEA2EA /* LYSWebManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSWebManager.h; sourceTree = "<group>"; };
 		0D2483B51EC9833B00BEA2EA /* LYSWebManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSWebManager.m; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 				0D89044D1EC69FF300DDFC5C /* UIWebVC.m */,
 				0D8904491EC69FB800DDFC5C /* MKWebVC.h */,
 				0D89044A1EC69FB800DDFC5C /* MKWebVC.m */,
+				0D035A311EE64A3200099A00 /* LYSWKWebManager.h */,
+				0D035A321EE64A3200099A00 /* LYSWKWebManager.m */,
 				0D89043B1EC69EA600DDFC5C /* Main.storyboard */,
 				0D89043E1EC69EA600DDFC5C /* Assets.xcassets */,
 				0D8904401EC69EA600DDFC5C /* LaunchScreen.storyboard */,
@@ -242,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D035A331EE64A3200099A00 /* LYSWKWebManager.m in Sources */,
 				0D89043A1EC69EA600DDFC5C /* ViewController.m in Sources */,
 				0D8904371EC69EA600DDFC5C /* AppDelegate.m in Sources */,
 				0D8904341EC69EA600DDFC5C /* main.m in Sources */,
