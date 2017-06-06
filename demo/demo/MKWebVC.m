@@ -14,7 +14,7 @@
 #import <WebKit/WebKit.h>
 
 
-@interface MKWebVC ()
+@interface MKWebVC () <WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler>
 
 
 @property (nonatomic, strong) WKWebView *mWebview;/**<  */
@@ -64,8 +64,22 @@
     
 }
 
+#pragma mark - WKUIDelegate
 
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    
+    
+    
+    
+}
 
+#pragma mark - WKScriptMessageHandler
+
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
+    
+    NSLog(@"%@-------%@",userContentController,message);
+    
+}
 
 
 

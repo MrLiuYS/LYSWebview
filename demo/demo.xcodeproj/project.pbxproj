@@ -20,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D15A71A1ECAE2FB00718942 /* LYSWebManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSWebManagerDelegate.h; sourceTree = "<group>"; };
 		0D2483B41EC9833B00BEA2EA /* LYSWebManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSWebManager.h; sourceTree = "<group>"; };
 		0D2483B51EC9833B00BEA2EA /* LYSWebManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSWebManager.m; sourceTree = "<group>"; };
 		0D89042F1EC69EA600DDFC5C /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +79,7 @@
 				0D8904361EC69EA600DDFC5C /* AppDelegate.m */,
 				0D8904381EC69EA600DDFC5C /* ViewController.h */,
 				0D8904391EC69EA600DDFC5C /* ViewController.m */,
+				0D15A71A1ECAE2FB00718942 /* LYSWebManagerDelegate.h */,
 				0D2483B41EC9833B00BEA2EA /* LYSWebManager.h */,
 				0D2483B51EC9833B00BEA2EA /* LYSWebManager.m */,
 				0D89044C1EC69FF300DDFC5C /* UIWebVC.h */,

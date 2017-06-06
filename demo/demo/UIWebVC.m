@@ -17,9 +17,15 @@
 
 @property (nonatomic, strong) UIWebView *mWebview;/**<  */
 
+@property (nonatomic, assign) BOOL isFirst;/**< 首次加载 */
+
 @end
 
 @implementation UIWebVC
+
+
+
+
 
 - (void)dealloc {
     NSLog(@"释放---UIWebVC");
@@ -68,9 +74,32 @@
     
     self.title = @"UIWebview";
     
-    NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://mrliuys.github.io/2017/05/13/APP-web-and-JS/js.html"]];
+    self.isFirst = YES;
     
-    [self.mWebview loadRequest:request];
+
+    
+    if (self.urlString && self.urlString.length > 0) {
+        
+        NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.urlString]];
+        
+        [self.mWebview loadRequest:request];
+        
+    }else {
+        
+        
+        
+        NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:4000/2017/05/13/APP-web-and-JS/demo.html"]];
+        
+//            NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://mrliuys.github.io/2017/05/13/APP-web-and-JS/demo.html"]];
+       
+//        NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
+        
+        [self.mWebview loadRequest:request];
+        
+    }
+    
+    
+
     
 }
 
@@ -80,13 +109,33 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
+    NSLog(@"%s",__func__);
+    
+    NSLog(@"请求接口:%@",request.URL);
+ 
+    NSURL *URL = request.URL;
     
     
+    /**
+     url接口拦截
+     */
+    if ([URL.scheme isEqualToString:@"native"]) {
+        
+        if ([URL.host isEqualToString:@"toast"]) {
+            
+            NSLog(@"toast 的参数:%@",URL.query);
+            
+            return NO;
+        }
+    }
     
     return YES;
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
+    
+    NSLog(@"%s",__func__);
+    
     
     
 }
@@ -94,17 +143,29 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     
+    /**
+     初始化context
+     */
     [LYSWebManager lys_Web_Set:webView];
     
+    /**
+     执行js脚本
+     */
+    [LYSWebManager lys_Web_EvaluateScript:@"document.getElementById(\"lcfarmlogo\").style.visibility=\"hidden\";"];
+
     
-    
+    NSLog(@"%s",__func__);
     
 }
+
+//OC直接调用js.隐藏H5的属性
+//stringByEvaluatingJavaScriptFromString ,进行OC调用js
+//    [webView stringByEvaluatingJavaScriptFromString:@"$(\"#logo\").hide();"];
 
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     
-    
+    NSLog(@"%s",__func__);
     
 }
 
@@ -114,7 +175,7 @@
 - (void)lys_Web_handleToast:(NSString *)toast {
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示"
-                                                                   message:@"toast"
+                                                                   message:toast
                                                             preferredStyle:UIAlertControllerStyleAlert];
 
     [alert addAction:[UIAlertAction actionWithTitle:@"确定"

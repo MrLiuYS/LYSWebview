@@ -12,6 +12,8 @@
 
 #import <JavaScriptCore/JavaScriptCore.h>
 
+#import "LYSWebManagerDelegate.h"
+
 @protocol LYSJSExport <JSExport>
 
 JSExportAs
@@ -21,13 +23,6 @@ JSExportAs
 
 @end
 
-@protocol LYSWebManagerDelegate <NSObject>
-
-@optional
-- (void)lys_Web_handleToast:(NSString *)toast;
-
-
-@end
 
 @interface LYSWebManager : NSObject <LYSJSExport>
 
@@ -36,6 +31,8 @@ JSExportAs
 
 
 @property (strong, nonatomic) JSContext *context;
+
++ (LYSWebManager *)sharedManager;
 
 
 /**
@@ -47,6 +44,12 @@ JSExportAs
  配置webview的数据
  */
 + (void)lys_Web_Set:(UIWebView *)webView;
+
+
+/**
+ 调用js的语法
+ */
++ (void)lys_Web_EvaluateScript:(NSString *)script;
 
 
 
