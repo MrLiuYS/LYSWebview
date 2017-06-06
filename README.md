@@ -373,5 +373,7 @@ window.webkit.messageHandlers.toast.postMessage({body: '我是气泡'});
 
 本文主要简单说明UIWebview和WKWebview的基本用法,OC->JS,JS->OC 的方法使用.
  WKWebview没有找到获取document的方法.感觉上会比UIWebview加载快速,检查内存也会比UIWebview占用少.如果已经放弃iOS 7,建议还是使用WKWebview.
+ 
+[本文demo](https://github.com/MrLiuYS/LYSWebview.git)
 
 
