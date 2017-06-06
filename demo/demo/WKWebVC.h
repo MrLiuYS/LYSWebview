@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MKWebVC : UIViewController
+@interface WKWebVC : UIViewController
 
 @end

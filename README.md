@@ -366,3 +366,12 @@ H5调用以下方法就能实现js->OC的调用
 window.webkit.messageHandlers.toast.postMessage({body: '我是气泡'});
 ```
 
+
+-------
+
+总结
+
+本文主要简单说明UIWebview和WKWebview的基本用法,OC->JS,JS->OC 的方法使用.
+ WKWebview没有找到获取document的方法.感觉上会比UIWebview加载快速,检查内存也会比UIWebview占用少.如果已经放弃iOS 7,建议还是使用WKWebview.
+
+

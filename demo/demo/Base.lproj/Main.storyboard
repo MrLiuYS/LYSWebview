@@ -31,7 +31,7 @@
         <!--WebVC-->
         <scene sceneID="3jy-0m-gga">
             <objects>
-                <viewController id="zkb-o5-37o" customClass="MKWebVC" sceneMemberID="viewController">
+                <viewController id="zkb-o5-37o" customClass="WKWebVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LcV-pW-Qx2"/>
                         <viewControllerLayoutGuide type="bottom" id="DXB-sZ-AL7"/>

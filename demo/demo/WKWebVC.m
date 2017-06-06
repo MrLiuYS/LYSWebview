@@ -6,7 +6,7 @@
 //  Copyright © 2017年 刘永生. All rights reserved.
 //
 
-#import "MKWebVC.h"
+#import "WKWebVC.h"
 
 
 #import <Masonry.h>
@@ -14,7 +14,7 @@
 #import "LYSWKWebManager.h"
 
 
-@interface MKWebVC () <WKUIDelegate,WKNavigationDelegate,LYSWKWebDelegate> {
+@interface WKWebVC () <WKUIDelegate,WKNavigationDelegate,LYSWKWebDelegate> {
     
     WKUserContentController * _userContentController;;
     
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation MKWebVC
+@implementation WKWebVC
 
 
 - (void)dealloc {

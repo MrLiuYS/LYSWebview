@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D035A331EE64A3200099A00 /* LYSWKWebManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D035A321EE64A3200099A00 /* LYSWKWebManager.m */; };
+		0D035A361EE6518800099A00 /* WKWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D035A341EE6518800099A00 /* WKWebVC.m */; };
 		0D2483B61EC9833B00BEA2EA /* LYSWebManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2483B51EC9833B00BEA2EA /* LYSWebManager.m */; };
 		0D8904341EC69EA600DDFC5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8904331EC69EA600DDFC5C /* main.m */; };
 		0D8904371EC69EA600DDFC5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8904361EC69EA600DDFC5C /* AppDelegate.m */; };
@@ -15,7 +16,6 @@
 		0D89043D1EC69EA600DDFC5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D89043B1EC69EA600DDFC5C /* Main.storyboard */; };
 		0D89043F1EC69EA600DDFC5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D89043E1EC69EA600DDFC5C /* Assets.xcassets */; };
 		0D8904421EC69EA600DDFC5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D8904401EC69EA600DDFC5C /* LaunchScreen.storyboard */; };
-		0D89044B1EC69FB800DDFC5C /* MKWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D89044A1EC69FB800DDFC5C /* MKWebVC.m */; };
 		0D89044E1EC69FF300DDFC5C /* UIWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D89044D1EC69FF300DDFC5C /* UIWebVC.m */; };
 		6AF8645EC0236FD3266EF3B6 /* libPods-demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E1F144FFED308BA20CDEDD /* libPods-demo.a */; };
 /* End PBXBuildFile section */
@@ -23,6 +23,8 @@
 /* Begin PBXFileReference section */
 		0D035A311EE64A3200099A00 /* LYSWKWebManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSWKWebManager.h; sourceTree = "<group>"; };
 		0D035A321EE64A3200099A00 /* LYSWKWebManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSWKWebManager.m; sourceTree = "<group>"; };
+		0D035A341EE6518800099A00 /* WKWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebVC.m; sourceTree = "<group>"; };
+		0D035A351EE6518800099A00 /* WKWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebVC.h; sourceTree = "<group>"; };
 		0D15A71A1ECAE2FB00718942 /* LYSWebManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSWebManagerDelegate.h; sourceTree = "<group>"; };
 		0D2483B41EC9833B00BEA2EA /* LYSWebManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSWebManager.h; sourceTree = "<group>"; };
 		0D2483B51EC9833B00BEA2EA /* LYSWebManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSWebManager.m; sourceTree = "<group>"; };
@@ -36,8 +38,6 @@
 		0D89043E1EC69EA600DDFC5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D8904411EC69EA600DDFC5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D8904431EC69EA600DDFC5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D8904491EC69FB800DDFC5C /* MKWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKWebVC.h; sourceTree = "<group>"; };
-		0D89044A1EC69FB800DDFC5C /* MKWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKWebVC.m; sourceTree = "<group>"; };
 		0D89044C1EC69FF300DDFC5C /* UIWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebVC.h; sourceTree = "<group>"; };
 		0D89044D1EC69FF300DDFC5C /* UIWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebVC.m; sourceTree = "<group>"; };
 		7634C4CA9908F4EA6F19A84B /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,8 +87,8 @@
 				0D2483B51EC9833B00BEA2EA /* LYSWebManager.m */,
 				0D89044C1EC69FF300DDFC5C /* UIWebVC.h */,
 				0D89044D1EC69FF300DDFC5C /* UIWebVC.m */,
-				0D8904491EC69FB800DDFC5C /* MKWebVC.h */,
-				0D89044A1EC69FB800DDFC5C /* MKWebVC.m */,
+				0D035A351EE6518800099A00 /* WKWebVC.h */,
+				0D035A341EE6518800099A00 /* WKWebVC.m */,
 				0D035A311EE64A3200099A00 /* LYSWKWebManager.h */,
 				0D035A321EE64A3200099A00 /* LYSWKWebManager.m */,
 				0D89043B1EC69EA600DDFC5C /* Main.storyboard */,
@@ -251,7 +251,7 @@
 				0D89043A1EC69EA600DDFC5C /* ViewController.m in Sources */,
 				0D8904371EC69EA600DDFC5C /* AppDelegate.m in Sources */,
 				0D8904341EC69EA600DDFC5C /* main.m in Sources */,
-				0D89044B1EC69FB800DDFC5C /* MKWebVC.m in Sources */,
+				0D035A361EE6518800099A00 /* WKWebVC.m in Sources */,
 				0D89044E1EC69FF300DDFC5C /* UIWebVC.m in Sources */,
 				0D2483B61EC9833B00BEA2EA /* LYSWebManager.m in Sources */,
 			);
