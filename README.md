@@ -251,7 +251,7 @@ WKWebview比UIWebview的优势有
 ```
 当调用以上方法.可以直接隐藏掉百度首页的logo
 
-## UIWebview中js调用OC
+## WKWebview中js调用OC
 
 ### 1.url拦截
 
